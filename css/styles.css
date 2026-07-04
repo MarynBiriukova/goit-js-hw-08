@@ -1,1 +1,36 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: 20px 0;
+    list-style-type: none;
+}
 
+.gallery-item {
+    width: calc((100% - (2 * 24px)) / 3);
+}
+
+.gallery-image{
+    width: 360px;
+    height: 200px;
+}
+
+.basicLightbox{
+   
+    background-color: rgba(46, 47, 66, 0.8);
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_img{
+    max-width: 1112px;
+    max-height: 640px;
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
