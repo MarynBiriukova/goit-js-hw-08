@@ -67,7 +67,7 @@ const images = [
 
 const container = document.querySelector(".gallery");
 container.innerHTML = createItemGal(images);
-console.log(container);
+//console.log(container);
 container.addEventListener("click", handlerClick);
 
 function createItemGal(arr) {
@@ -91,12 +91,13 @@ function createItemGal(arr) {
 
 
 function handlerClick(evt) {
-    
+
+    if (!evt.target.hasAttribute('data-source')) return;
+
     const image = images.find(item => item.original ===
         evt.target.dataset.source);
     if (image) {
         evt.preventDefault();
-        //console.log(evt.target.dataset.source);
         const instance = basicLightbox.create(`
              <img class="modal_img"
                 src="${image.original}"
