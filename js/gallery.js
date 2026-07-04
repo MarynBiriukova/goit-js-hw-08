@@ -74,7 +74,7 @@ function createItemGal(arr) {
     const i = 0;
     return arr.map(pict => 
         `
-        <li class "gallery-item"  >
+        <li class="gallery-item" >
             <a class="gallery-link" href="${pict.original}">
                 <img
                 class="gallery-image"
